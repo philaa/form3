@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="impressao.css" media="print" />
+    
+</head>
+<body>
+    <form method="get" action="cadastratar.php">
+        <fieldset>
+            <legend>Cadastramento do Usuário</legend>
+             <label>Nome:</label>
+             <input type="text" maxlength="80" name="nome" required placeholder="Digite o seu nome"/>
+             <label>Senha</label>
+             <input type="password" name="senha" maxlength="10"/>
+
+             <fieldset>
+                 <Legend>O que voce gosta</Legend>
+                 <input id="Livro"   name="Livro"   type="checkbox" value="1" checked /><label for="Livro">Livro</label>
+                 <input id="Jornal"  name="Jornal"  type="checkbox" value="2" /><label for="Jornal">Jornal</label>
+                 <input id="Revista" name="Revista" type="checkbox" value="3" /><label for="Revista">Revista</label>
+             </fieldset>
+
+             <fieldset>
+                 <legend>Escolha o sexo</legend>
+                  <input id="rbMasc" name="sexo" type="radio" value="masculino" checked /> <label for="rbMasc">Masculino</label>
+                 <input id="rbFem" name="sexo" type="radio" value="masculino" checked /> <label for="rbFem">Feminino</label>
+              </fieldset>
+              <label>Comentarios</label>
+              <textarea id="texto" name="comentario" rows="3" cols="30"></textarea>
+
+              <div id="linha1">
+                <div class="campoTipo1">
+                  <label for="">Escolha a cor desejada </label>
+                  <input name="cor" type="color" value="0000ff" />
+                </div>
+                <div class="campoTipo1">
+                  <label for="">Escolha a data desejada</label>
+                  <input name="dataConsulta" type="date" value="2012-07-01" />
+                </div>
+                <div class="campoTipo1">
+                  <label for="">Escolha a semana desejada</label>
+                  <input name="dataConsulta" type="week" />
+                </div>
+                <div class="campoTipo1">
+                  <label for="">Escolha a mes desejada</label>
+                  <input name="dataConsulta" type="month" />
+                </div>
+                <div class="campoTipo1">
+                  <label for="">Escolha a dia desejada</label>
+                  <input name="dataConsulta" type="day" />
+                </div>
+              </div> <!--linha1-->
+
+              <div id="linha2">
+                <div class="campoTipo1" class="clear">
+                  <label for="">Email</label>
+                  <input name="email" type="email" />
+                </div>
+                <div class="campoTipo1" class="clear">
+                  <label for="">Entre com a quantidade</label>
+                  <input name="numero" type="number" min=10 max=100 step=5 value=50 />
+                </div>
+                <div class="campoTipo1" class="clear">
+                  <label for="">Volume</label>
+                  <input name="range" type="range" min=1 max=1000 step=0.5 value=50 />
+                  <output>50</output>
+                  <span class=transfLine>%</span>
+                <div class="campoTipo1" class="clear">
+                  <label for="">Pesquisa</label>
+                  <input name="busca" type="search" />
+                </div>
+                <div class="campoTipo1" class="clear">
+                  <label for="">Telefone</label>
+                  <input name="telefone" type="tel" pattern="[0-9]{5}(\-[0-9]{3})?" placeholder="Digite apenas numeros" />
+                </div>
+                <div class="campoTipo1" class="clear">
+                  <label for="">Site</label>
+                  <input name="site" type="url"  placeholder="Digite seu site" autocomplete=on list="listaUrl" />
+                  <datalist id="listaUrl">
+                      <option value="http:\\www.google.com">Google</option>
+                      <option value="http:\\www.g1.com">g1</option>
+                      <option value="http:\\www.uol.com.br">uol</option>
+                  </datalist>
+                </div>
+                </div>
+              </div> <!--linha2-->
+              <p><a href="www.cepel.br">Cepel</a>       
+
+             <input class="clear transfBloco" type="submit" value="Enviar"/>
+        </fieldset>
+    </form>
+</body>
+</html>
